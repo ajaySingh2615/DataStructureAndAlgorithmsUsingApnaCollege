@@ -2,21 +2,17 @@ public class Main {
     public static void main(String[] args) {
         int n = 10;
 
-//        printDec(n);
-//        printInc(n);
+        int[] arr = {8, 3, 6, 9, 5, 10, 2, 5, 3};
+        System.out.println(firstOccurrence(arr, 5, 0));
+    }
 
-//        System.out.println(fac(n));
+    // WAF to find the first occurrence of an element in an array
+    public static int firstOccurrence(int[] arr, int key, int i){
+        if(i == arr.length) return -1;
 
-//        System.out.println(sumOfFirstNaturalNumbers(n));
+        if(arr[i] == key) return i;
 
-//        System.out.println(fibonacciNumber(5));
-//        for (int i = 0; i < n; i++) {
-//            System.out.println(i + " : " + fibonacciNumber(i));
-//        }
-
-        int[] arr = {1, 2, 3, 40, 5};
-        System.out.println(isSorted(arr, 0));
-
+        return firstOccurrence(arr, key, i+1);
     }
 
     // check if a given array is sorted or not
